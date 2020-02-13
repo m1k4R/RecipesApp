@@ -1,0 +1,33 @@
+﻿<Window x:Class="ReceptiZaKolace.WindowPrikazi"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ReceptiZaKolace"
+        mc:Ignorable="d"
+        Title="Recept" Height="810.5" Width="968.25">
+    <Grid Margin="0,0,-8,-3" Background="#FFEEE4E8">
+        <Image x:Name="image" Stretch="UniformToFill" HorizontalAlignment="Left" Height="272" Margin="558,114,0,0" VerticalAlignment="Top" Width="396"/>
+        <Label x:Name="labelS" Content="Sastojci:" HorizontalAlignment="Left" Height="56" Margin="10,330,0,0" VerticalAlignment="Top" Width="291" FontFamily="Segoe Print" FontSize="24" Background="#FFFCD6E5" Opacity="0.8" BorderBrush="#FFE0CBD3" BorderThickness="3"/>
+        <Label x:Name="labelP" Content="Priprema:"  HorizontalAlignment="Left" Height="56" Margin="326,330,0,0" VerticalAlignment="Top" Width="227" FontFamily="Segoe Print" FontSize="24" Background="#FFF9D6E4" Opacity="0.8" BorderBrush="#FFE0CBD3" BorderThickness="3"/>
+        <Label x:Name="labelSat" Content="" HorizontalContentAlignment="Center" HorizontalAlignment="Left" Height="61" Margin="326,242,0,0" VerticalAlignment="Top" Width="208" FontFamily="Segoe Print" FontSize="24">
+            <Label.Background>
+                <ImageBrush ImageSource="sat.jpg" Opacity="0.6"/>
+            </Label.Background>
+        </Label>
+        <Label x:Name="labelVrsta" Content="" HorizontalContentAlignment="Center" HorizontalAlignment="Left" Height="61" Margin="47,242,0,0" VerticalAlignment="Top" Width="232" FontFamily="Segoe Print" FontSize="24">
+            <Label.Background>
+                <ImageBrush ImageSource="sta.jpg" Opacity="0.6"/>
+            </Label.Background>
+        </Label>
+        <Button x:Name="buttonIzlaz" Content="Nazad" Background="Transparent" BorderBrush="Transparent" HorizontalAlignment="Left" Height="64" Margin="824,718,0,0" VerticalAlignment="Top" Width="130" FontFamily="Segoe Print" FontSize="22" Click="buttonIzlaz_Click" RenderTransformOrigin="-0.096,-2.635" Foreground="#FF807062"/>
+        <TextBox x:Name="textBoxNaziv" HorizontalAlignment="Center" TextAlignment="Center" IsReadOnly="True" BorderBrush="Transparent" Height="109" Margin="0,0,7,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="961" FontFamily="Segoe Print" FontSize="48">
+            <TextBox.Background>
+                <ImageBrush ImageSource="slicica.png" Stretch="Uniform"/>
+            </TextBox.Background>
+        </TextBox>
+        <TextBox x:Name="textBoxOpis" HorizontalAlignment="Left" TextAlignment="Center" IsReadOnly="True" Background="Transparent" BorderBrush="Transparent" Height="123" Margin="10,114,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="543" FontFamily="Segoe Print" FontSize="20"/>
+        <TextBox x:Name="textBoxSastojci" HorizontalAlignment="Left" TextAlignment="Left" IsReadOnly="True" Background="#FFF9D6E4" BorderBrush="#FFE0CBD3" BorderThickness="5" Height="330" Margin="10,386,660,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="294" FontFamily="Segoe Print" FontSize="20"/>
+        <TextBox x:Name="textBoxPriprema" HorizontalAlignment="Left" TextAlignment="Left" IsReadOnly="True" Background="#FFF6D6E3" BorderBrush="#FFE0CBD3" BorderThickness="5" Height="330" Margin="326,386,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="628" FontFamily="Segoe Print" FontSize="20"/>
+    </Grid>
+</Window>

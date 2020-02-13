@@ -1,0 +1,70 @@
+﻿<Window x:Class="ReceptiZaKolace.WindowDodajRecept"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ReceptiZaKolace"
+        mc:Ignorable="d"
+        Title="Dodaj svoj recept" Height="605.778" Width="891.018">
+    <Grid Margin="0,0,2,-3">
+        <Grid.Background>
+            <ImageBrush ImageSource="sveska.jpg" Stretch="UniformToFill"/>
+        </Grid.Background>
+        <Label x:Name="labelNaziv" Content="Naziv:" Height="35" Width="58" FontSize="16" FontFamily="Segoe Print" HorizontalAlignment="Left" VerticalAlignment="Top" Foreground="#FF19150F" Margin="106,62,0,0"/>
+        <TextBox x:Name="textBoxNaziv" AcceptsReturn="True" Background="#FFF5F0F0" Opacity="0.8" BorderBrush="Transparent" HorizontalAlignment="Left" Height="25" Margin="160,68,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="244" Foreground="#FF13110C" FontSize="16" FontFamily="Segoe Print"/>
+        <Label x:Name="labelOpis" Content="Opis:" Height="35" Width="58" FontSize="16" FontFamily="Segoe Print" HorizontalAlignment="Left" VerticalAlignment="Top" Foreground="#FF19150F" Margin="107,102,0,0"/>
+        <TextBox x:Name="textBoxOpis" AcceptsReturn="True" Background="#FFF2ECEC" Opacity="0.8" BorderBrush="Transparent" HorizontalAlignment="Left" Height="27" Margin="159,110,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="244" Foreground="#FF13110C" FontSize="16" FontFamily="Segoe Print"/>
+        <Label x:Name="labelVrsta" Content="Vrsta:" Height="32" Width="58" FontSize="14" FontFamily="Segoe Print" HorizontalAlignment="Left" VerticalAlignment="Top" Foreground="#FF19150F" Margin="101,210,0,0"/>
+        <ComboBox x:Name="comboBoxVrsta" HorizontalAlignment="Left" Height="20" Margin="148,217,0,0" VerticalAlignment="Top" Width="94"/>
+        <Label x:Name="labelSlika" Content="Slika:" Height="35" Width="59" FontSize="14" FontFamily="Segoe Print" HorizontalAlignment="Left" VerticalAlignment="Top" Foreground="#FF19150F" Margin="106,157,0,0" RenderTransformOrigin="1.067,-3.196"/>
+        <Button x:Name="buttonSlika" Content="BROWSE . . ." Background="#FFF2ECEC" HorizontalAlignment="Left" Height="25" Margin="159,163,0,0" VerticalAlignment="Top" Width="71" Click="buttonSlika_Click" FontSize="11" FontFamily="Segoe Print"/>
+        <Image x:Name="image" HorizontalAlignment="Left" Height="108" Margin="242,163,0,0" VerticalAlignment="Top" Width="161"/>
+        <Label x:Name="labelVrijeme" Content="Vrijeme potrebno za pripremu:" Height="30" Width="233" FontSize="14" FontFamily="Segoe Print" HorizontalAlignment="Left" VerticalAlignment="Top" Foreground="#FF19150F" Margin="101,481,0,0"/>
+        <TextBox x:Name="textBoxVrijeme" Background="#FFF2ECEC" Opacity="0.8" BorderBrush="Transparent" HorizontalAlignment="Left" Height="30" Margin="334,481,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="38" Foreground="#FF13110C" FontSize="16" FontFamily="Segoe Print" RenderTransformOrigin="0.803,1.367"/>
+        <Label x:Name="labelSastojci" Content="Sastojci:" Height="35" Width="73" FontSize="14" FontFamily="Segoe Print" HorizontalAlignment="Left" VerticalAlignment="Top" Foreground="#FF19150F" Margin="101,298,0,0"/>
+        <TextBox x:Name="textBoxSastojci" Background="#FFF2ECEC" Opacity="0.8" BorderBrush="Transparent" AcceptsReturn="True" HorizontalAlignment="Left" Height="183" Margin="164,298,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="240" Foreground="#FF13110C" FontSize="16" FontFamily="Segoe Print"/>
+        <Label x:Name="labelPriprema" Content="Priprema:" Height="35" Width="102" FontSize="16" FontFamily="Segoe Print" HorizontalAlignment="Left" VerticalAlignment="Top" Foreground="#FF19150F" Margin="471,77,0,0"/>
+        <TextBox x:Name="textBoxPriprema" Background="#FFF2ECEC" Opacity="0.8" BorderBrush="Transparent" AcceptsReturn="True" HorizontalAlignment="Left" Height="361" Margin="480,110,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="258" Foreground="#FF13110C" FontSize="16" FontFamily="Segoe Print"/>
+        <Button x:Name="buttonDodaj" Content="Dodaj recept" Background="#FFDEC6C6"  BorderBrush="Transparent" HorizontalAlignment="Left" Height="30" Margin="480,476,0,0" VerticalAlignment="Top" Width="123" FontFamily="Segoe Print" FontSize="16" Click="buttonDodaj_Click" Foreground="#FF0E0D0D">
+            <!-- <Button.Style>
+                <Style TargetType="Button">
+                    <Setter Property="FocusVisualStyle" Value="{x:Null}" />
+                    <Setter Property="Template">
+                        <Setter.Value>
+                            <ControlTemplate TargetType="Button">
+                                <Border Name="border" 
+                                         BorderThickness="{TemplateBinding BorderThickness}"
+                                         Padding="{TemplateBinding Padding}" 
+                                         BorderBrush="{TemplateBinding BorderBrush}" 
+                                         CornerRadius="5"
+                                         Background="{TemplateBinding Background}">
+                                    <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" />
+                                </Border>
+                                <ControlTemplate.Triggers>
+                                    <Trigger Property="IsMouseOver" Value="True">
+                                        <Setter Property="BorderBrush" Value="Gainsboro" />
+                                    </Trigger>
+                                    <Trigger Property="IsEnabled" Value="false">
+                                        <Setter Property="Opacity" Value="0.25" />
+                                        <Setter Property="BorderBrush" Value="Transparent" />
+                                    </Trigger>
+                                </ControlTemplate.Triggers>
+                            </ControlTemplate>
+                        </Setter.Value>
+                    </Setter>
+                </Style>
+            </Button.Style>   -->
+        </Button>
+
+
+        <Button x:Name="buttonIzadji" Content="Izadji" Background="#FFDEC6C6" BorderBrush="Transparent" HorizontalAlignment="Left" Height="30" Margin="608,476,0,0" VerticalAlignment="Top" Width="123" FontFamily="Segoe Print" FontSize="16" Click="buttonIzadji_Click" Foreground="#FF0E0D0D" RenderTransformOrigin="0.667,0.4"/>
+        <Label x:Name="labelMin" Content="min." Height="30" Width="39" FontFamily="Segoe Print" HorizontalAlignment="Left" VerticalAlignment="Top" Foreground="#FF19150F" Margin="365,481,0,0"/>
+        <Label x:Name="labelGreskaNaziv" Content="" HorizontalAlignment="Left" Height="25" Margin="161,46,0,0" VerticalAlignment="Top" Width="243" FontSize="11" Foreground="#FFD11919"/>
+        <Label x:Name="labelGreskaVrsta" Content="" HorizontalAlignment="Left" Height="22" Margin="159,193,0,0" VerticalAlignment="Top" Width="78" FontSize="11" Foreground="#FFD11919"/>
+        <Label x:Name="labelGreskaSlika" Content="" HorizontalAlignment="Left" Height="24" Margin="159,142,0,0" VerticalAlignment="Top" Width="82" FontSize="11" Foreground="#FFD11919"/>
+        <Label x:Name="labelGreskaSastojci" Content="" HorizontalAlignment="Left" Height="27" Margin="160,271,0,0" VerticalAlignment="Top" Width="99" FontSize="11" Foreground="#FFD11919"/>
+        <Label x:Name="labelGreskaVrijeme" Content="" HorizontalAlignment="Left" Height="22" Margin="313,459,0,0" VerticalAlignment="Top" Width="90" FontSize="11" Foreground="#FFD11919"/>
+        <Label x:Name="labelGreskaPriprema" Content="" HorizontalAlignment="Left" Height="35" Margin="558,82,0,0" VerticalAlignment="Top" Width="118" FontSize="11" Foreground="#FFD11919"/>
+        <Label x:Name="labelGreskaOpis" Content="" HorizontalAlignment="Left" Height="25" Margin="160,90,0,0" VerticalAlignment="Top" Width="243" FontSize="11" Foreground="#FFD11919"/>
+    </Grid>
+</Window>
